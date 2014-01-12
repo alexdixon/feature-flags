@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get "features", to: 'features#index'
+
+  get "presentation/slide2"
+
+  get "presentation", to: 'presentation#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
