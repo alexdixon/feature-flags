@@ -1,2 +1,8 @@
-%h1 Features#index
-%p Find me in app/views/features/index.html.haml
+%h1 Presentation Features
+%p Features to make this more awesome!
+
+%ul
+	%li
+		= label_tag 'feature_better_layout', 'better_layout'
+		= check_box_tag 'feature_better_layout', nil, on?(:better_layout)
+
