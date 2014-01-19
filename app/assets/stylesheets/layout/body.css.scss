@@ -1,0 +1,45 @@
+@import 'compass/css3';
+
+body.better {
+	margin: 0;
+	font-family: Helvetica,  Arial, sans-serif;
+	height: 100%;
+
+	$dark-color: #2B2B2B;
+	$light-color: #F6F6F6;
+	$splash-color: #DE1B1B;
+
+	header {
+		@include background-image(linear-gradient(darken($light-color, 5%), lighten($light-color, 10%)));
+		color: $dark-color;
+		border-bottom: 4px solid $splash-color;
+		margin-bottom: 4px;
+		h1 {
+			margin: 0 40px;
+			line-height: 80px;
+			font-size: 40px;
+		}
+
+	}
+
+	section.main {
+		background: $dark-color;
+		@include background-image(linear-gradient(lighten($dark-color, 10%) 0px, $dark-color 40px, $dark-color 100%));
+		color: $light-color;
+		height: 100%;
+		padding: 40px;
+
+		ul {
+			text-align: left;
+		}
+
+		h1 {
+			margin-top: 0;
+		}
+
+		a {
+			color: $splash-color;
+		}
+	}
+
+}

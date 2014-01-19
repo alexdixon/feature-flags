@@ -11,5 +11,10 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require_tree ./layout
  *= require_self
  */
+
+html {
+	height: 100%;
+}

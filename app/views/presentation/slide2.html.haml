@@ -1,3 +1,6 @@
+= content_for :header do
+	%h1= "The point"
+
 %h1 Why -- what's the point Dixon?
 %h2 Here's some of the things we've found useful:
 %ul
@@ -9,6 +12,3 @@
 %p
 	Also, this presentation needs more pop, doesn't it.  Let's enable some
 	=link_to 'features!', :controller => 'features'
-
-- if on? :better_layout
-	%h3= "Hey -- make a better layout yo!!!"
