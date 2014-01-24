@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   get "features", to: 'features#index'
 
-  get "presentation/slide2"
+  get "presentation/slide:slide_index", to: 'presentation#slide_n', constraints: { slide_index: /[0-9]+/ }
 
   get "presentation", to: 'presentation#index'
+  get "/", to: redirect('/presentation')
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
