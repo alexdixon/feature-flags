@@ -1,14 +1,17 @@
 = content_for :header do
-	%h1= "The point"
+	%h1= "Feature flags -- why use em'?"
 
-%h1 Why -- what's the point Dixon?
-%h2 Here's some of the things we've found useful:
+%h1 It's all about being agile
 %ul
 	%li Separate deployments from functionality, reducing risk
 	%li Get new code to master sooner, avoiding merge conflicts*
 	%li Test new features on production *before* your customers do.
-	%li Test new features on production *before* your customers do.
+	%li Make large changes safely
+	%li Enable selective functionality cleanly
 
-%p
-	Also, this presentation needs more pop, doesn't it.  Let's enable some
-	=link_to 'features!', :controller => 'features'
+- if on? :better_layout
+	%p= link_to 'Next', slide_url(3)
+- else
+	%p
+		Also, this presentation needs more pop, doesn't it.  Let's enable some
+		=link_to 'features!', :controller => 'features'

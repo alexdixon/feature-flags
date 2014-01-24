@@ -1,1 +1,14 @@
-%h1 TODO: add some content
+= content_for :header do
+	%h1 This presentation
+
+%h2 Rolled my own feature implementation
+%ul
+	%li There are a few other libraries, but most aren't maintained
+	%li
+		I'll talk about
+		= link_to 'rollout', 'https://github.com/FetLife/rollout'
+		later, but it was overkill for this.
+	%li I'm supposed to show you some code now.
+
+-# FIXME DRY!!!
+%p= link_to 'Next', slide_url(4)

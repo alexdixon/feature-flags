@@ -1,4 +1,8 @@
-%h1 Feature Flags and Agile Development
+- if on? :better_layout
+	= content_for :header do
+		%h1 Feature Flags and Agile Development
+- else
+	%h1 Feature Flags and Agile Development
 %p (awesome features not yet enabled)
 %p Alex Dixon
-%p= link_to 'Next -- Why?', slide_url(2)
+%p= link_to 'Next', slide_url(2)
