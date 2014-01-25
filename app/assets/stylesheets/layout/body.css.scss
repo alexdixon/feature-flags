@@ -1,4 +1,25 @@
 @import 'compass/css3';
+@import 'font-awesome';
+
+// Bootstrap icon-[$name] mixin-fix
+@mixin icon($name) {
+	&:before {
+		font-family: FontAwesome;
+		font-weight: normal;
+		font-style: normal;
+		display: inline-block;
+		text-decoration: inherit;
+		margin-right: 0.4em;
+	}
+	@extend .#{$name};
+}
+
+// Bootstrap span[$size] mixin-fix
+@mixin span($size) {
+	float: left;
+	margin-left: 30px;
+	@extend .span#{$size};
+}
 
 body.better {
 	margin: 0;
@@ -42,4 +63,17 @@ body.better {
 		}
 	}
 
+	nav {
+		margin-left: 60px;
+		a {
+			text-decoration: none;
+		}
+		i {
+			font-size: 40pt;
+			&.disabled { color: #999; }
+		}
+		i.prev { @include icon(fa-toggle-left) }
+		i.next { @include icon(fa-toggle-right) }
+		i.top { @include icon(fa-toggle-up) }
+	}
 }

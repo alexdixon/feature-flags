@@ -12,6 +12,25 @@
 				= yield :header
 			%section.main
 				= yield
+				- if @layout_options.include_navigation?
+					%nav
+						- if @layout_options.nav_prev.blank?
+							%i.prev.disabled
+						- else
+							= link_to @layout_options.nav_prev do
+								%i.prev
+						- if @layout_options.nav_top.blank?
+							%i.top.disabled
+						- else
+							= link_to @layout_options.nav_top do
+								%i.top
+						- if @layout_options.nav_next.blank?
+							%i.next.disabled
+						- else
+							= link_to @layout_options.nav_next do
+								%i.next
+
 	- else
 		%body
 			= yield
+

@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 	
-	before_filter :init_features
+	before_filter :init_features, :init_common
 
 	def init_features
 		@features = {}
@@ -31,5 +31,9 @@ class ApplicationController < ActionController::Base
 		@features[feature] == true
 	end
 	helper_method :on?
+
+	def init_common
+		@layout_options = LayoutOptions.new
+	end
 
 end

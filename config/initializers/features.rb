@@ -3,7 +3,8 @@ $features = {
 	],
 
 	off: [
-		:better_layout
+		:better_layout,
+		:navigation
 	],
 
 	debug: [

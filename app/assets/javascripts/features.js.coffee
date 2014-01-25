@@ -9,5 +9,7 @@ $ ->
 		else
 			$.removeCookie("feature_#{feature_name}")
 
-	$('input#feature_better_layout').change ->
-		toggleFeature('better_layout', $(@).is(':checked'))
+	$('input').change (event) ->
+		$target = $(event.target)
+		feature = $target.data('feature')
+		toggleFeature(feature, $target.is(':checked'))

@@ -10,6 +10,7 @@ gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
 gem 'compass-rails'
+gem 'font-awesome-sass'
 
 # Use Haml for html templating
 gem 'haml-rails'
