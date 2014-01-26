@@ -10,8 +10,11 @@
 	%li Enable selective functionality cleanly
 
 - if on? :better_layout
+	%p Not a designer!!!
+	- unless on? :navigation
 	%p= link_to 'Next', slide_url(3)
 - else
 	%p
-		Also, this presentation needs more pop, doesn't it.  Let's enable some
+		Man this presentation is ugly... which we had some 
 		=link_to 'features!', :controller => 'features'
+		to make it better...

@@ -10,5 +10,5 @@
 		later, but it was overkill for this.
 	%li I'm supposed to show you some code now.
 
--# FIXME DRY!!!
-%p= link_to 'Next', slide_url(4)
+- unless on? :navigation
+	%p= link_to 'Next', slide_url(4)

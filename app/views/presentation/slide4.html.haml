@@ -1,0 +1,10 @@
+= content_for :header do
+	%h1 So when should I use em'
+
+%h2 I usually ask the following questions
+%ul
+	%li Is it easy to feature enable?
+	%li Is it trivial?  How hard would patching and re-deploying be?
+	%li Are there components I can only test on production (or where production is different)?
+	%li They're also really useful for adding debugging tools
+	%li Temporary events (e.g. April fools)
