@@ -30,6 +30,10 @@
 							= link_to @layout_options.nav_next do
 								%i.next
 
+			-# TODO: hide secret features
+			:javascript
+				Feature.setFeatures(#{@features.to_json})
+
 	- else
 		%body
 			= yield

@@ -12,9 +12,9 @@
 - if on? :better_layout
 	%p Not a designer!!!
 	- unless on? :navigation
-	%p= link_to 'Next', slide_url(3)
+		%p= link_to 'Next', slide_url(3)
 - else
 	%p
 		Man this presentation is ugly... which we had some 
-		=link_to 'features!', :controller => 'features'
+		= link_to 'features!', :controller => 'features'
 		to make it better...

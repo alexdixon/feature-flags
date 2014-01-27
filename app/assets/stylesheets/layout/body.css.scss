@@ -76,4 +76,15 @@ body.better {
 		i.next { @include icon(fa-toggle-right) }
 		i.top { @include icon(fa-toggle-up) }
 	}
+
+	.hidden {
+		opacity: 0;
+	}
+
+	#js-example-slide {
+		h2 {
+			@include transition-property(opacity);
+			@include transition-duration(2s);
+		}
+	}
 }

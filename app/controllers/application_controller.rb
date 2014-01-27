@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
 	def init_features
 		@features = {}
 		
+		# TODO: add group detection logic before this, and enable the appropriate features
 		$features.each_pair do |key, feature_list|
 			feature_list ||= []
 			if key == :on
@@ -25,6 +26,7 @@ class ApplicationController < ActionController::Base
 				@features[feature] = true
 			end
 		end
+
 	end
 
 	def on?(feature)

@@ -1,11 +1,12 @@
 %h1 Presentation Features
 %p Features to make this more awesome!
 
-- $features.each_pair do |group, features|
-	%h2= group
-	%ul
-		- features.each do |feature|
-			%li
-				= label_tag "feature_#{feature}", feature
-				= check_box_tag "feature_#{feature}", nil, on?(feature), :"data-feature" => feature
+#feature-switches
+	- $features.each_pair do |group, features|
+		%h2= group
+		%ul
+			- features.each do |feature|
+				%li
+					= label_tag "feature_#{feature}", feature
+					= check_box_tag "feature_#{feature}", nil, on?(feature), :"data-feature" => feature
 

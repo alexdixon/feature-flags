@@ -1,0 +1,18 @@
+= content_for :header do
+	%h1 Rollout Examples
+
+%p This is here in case I forget to have their github page up.
+%pre
+	:plain
+		
+		$redis   = Redis.new
+		$rollout = Rollout.new($redis)
+
+		# Check whether a feature is active for a particular user:
+		$rollout.active?(:chat, User.first) # => true/false
+
+		# Check whether a feature is active globally:
+		$rollout.active?(:chat)
+
+		# Activate for a percentage of users
+		$rollout.activate_percentage(:chat, 20)
